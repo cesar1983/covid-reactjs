@@ -4,6 +4,8 @@ import { Card, CardContent, Typography, Grid } from "@material-ui/core";
 import CountUp from "react-countup";
 import cx from "classnames";
 
+import moment from "moment";
+
 import classes from "./Cards.module.css";
 
 const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
@@ -21,10 +23,10 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
           className={cx(classes.card, classes.infected)}
         >
           <CardContent>
-            <Typography color="textSecondary" gutterBottom>
+            <Typography variant="h6" gutterBottom>
               Infectados
             </Typography>
-            <Typography variant="h6">
+            <Typography variant="h4">
               <CountUp
                 start={0}
                 end={confirmed.value}
@@ -32,8 +34,8 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
                 separator=","
               />
             </Typography>
-            <Typography color="textSecondary">
-              {new Date(lastUpdate).toDateString()}
+            <Typography color="textPrimary">
+              {moment(Date(lastUpdate)).format("DD/MM/YYYY")}
             </Typography>
           </CardContent>
         </Grid>
@@ -46,10 +48,10 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
           className={cx(classes.card, classes.recovered)}
         >
           <CardContent>
-            <Typography color="textSecondary" gutterBottom>
+            <Typography variant="h6" gutterBottom>
               Recuperados
             </Typography>
-            <Typography variant="h6">
+            <Typography variant="h4">
               <CountUp
                 start={0}
                 end={recovered.value}
@@ -58,7 +60,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
               />
             </Typography>
             <Typography color="textSecondary">
-              {new Date(lastUpdate).toDateString()}
+              {moment(Date(lastUpdate)).format("DD/MM/YYYY")}
             </Typography>
           </CardContent>
         </Grid>
@@ -70,11 +72,11 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
           component={Card}
           className={cx(classes.card, classes.deaths)}
         >
-          <CardContent>
-            <Typography color="textSecondary" gutterBottom>
+          <CardContent align="center">
+            <Typography variant="h6" gutterBottom>
               Mortes
             </Typography>
-            <Typography variant="h6">
+            <Typography variant="h4">
               <CountUp
                 start={0}
                 end={deaths.value}
@@ -83,7 +85,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
               />
             </Typography>
             <Typography color="textSecondary">
-              {new Date(lastUpdate).toDateString()}
+              {moment(Date(lastUpdate)).format("DD/MM/YYYY")}
             </Typography>
           </CardContent>
         </Grid>

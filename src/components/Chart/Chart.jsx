@@ -13,9 +13,8 @@ const Charts = ({ data: { confirmed, recovered, deaths }, country }) => {
     const fetchApi = async () => {
       setDailyData(await fetchDailyData());
     };
-
     fetchApi();
-  });
+  }, []);
 
   const barChart = confirmed ? (
     <Bar
