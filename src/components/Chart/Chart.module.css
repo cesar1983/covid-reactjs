@@ -4,3 +4,9 @@
   justify-content: center;
   width: 80%;
 }
+
+@media only screen and (max-width: 957px) {
+  .container {
+    width: 80%;
+  }
+}
