@@ -40,11 +40,13 @@ export const fetchCountries = async () => {
   try {
     const response = await axios.get(`${url}/countries`);
 
-    const modifiedResponse = response.data.countries.map(
-      (country) => country.name
-    );
+    const countryNameArray = response.data.countries.map((country) => {
+      return country.name;
+    });
 
-    return modifiedResponse;
+    // console.log(countryNameArray);
+
+    return countryNameArray;
 
     // console.log(response);
   } catch (error) {
