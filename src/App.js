@@ -1,16 +1,16 @@
-import React, { Component } from "react";
-import classes from "./App.module.css";
+import React, { Component } from 'react';
+import classes from './App.module.css';
 
-import { Cards, Chart, CountryPicker } from "./components";
+import { Cards, Chart, CountryPicker } from './components';
 
-import { fetchData } from "./api";
+import { fetchData } from './api';
 
-import covidImage from "./images/covid.png";
+import covidImage from './images/covid.png';
 
 class App extends Component {
   state = {
     data: {},
-    country: "",
+    country: '',
   };
 
   async componentDidMount() {

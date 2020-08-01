@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "yarn": "1.21.1",
-    "node": "13.6.0"
+    "yarn": "1.22.4",
+    "node": "14.4.0"
   },
   "dependencies": {
     "@material-ui/core": "^4.9.14",
@@ -41,5 +41,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.0.5"
   }
 }

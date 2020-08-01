@@ -1,16 +1,16 @@
-import React from "react";
+import React from 'react';
 
-import { Card, CardContent, Typography, Grid } from "@material-ui/core";
-import CountUp from "react-countup";
-import cx from "classnames";
+import { Card, CardContent, Typography, Grid } from '@material-ui/core';
+import CountUp from 'react-countup';
+import cx from 'classnames';
 
-import moment from "moment";
+import moment from 'moment';
 
-import classes from "./Cards.module.css";
+import classes from './Cards.module.css';
 
 const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
   if (!confirmed) {
-    return "Loading...";
+    return 'Loading...';
   }
   return (
     <div className={classes.Container}>
@@ -35,7 +35,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
               />
             </Typography>
             <Typography color="textPrimary">
-              {moment(Date(lastUpdate)).format("DD/MM/YYYY")}
+              {moment(Date(lastUpdate)).format('DD/MM/YYYY')}
             </Typography>
           </CardContent>
         </Grid>
@@ -60,7 +60,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
               />
             </Typography>
             <Typography color="textSecondary">
-              {moment(Date(lastUpdate)).format("DD/MM/YYYY")}
+              {moment(Date(lastUpdate)).format('DD/MM/YYYY')}
             </Typography>
           </CardContent>
         </Grid>
@@ -85,7 +85,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
               />
             </Typography>
             <Typography color="textSecondary">
-              {moment(Date(lastUpdate)).format("DD/MM/YYYY")}
+              {moment(Date(lastUpdate)).format('DD/MM/YYYY')}
             </Typography>
           </CardContent>
         </Grid>
